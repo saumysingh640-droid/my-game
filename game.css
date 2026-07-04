@@ -1,0 +1,125 @@
+body{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background-color:black;
+}
+
+#score{
+    position:absolute;
+    top:20px;
+    left:20px;
+    color:white;
+    font-size:30px;
+}
+
+#gameArea{
+    width:400px;
+    height:600px;
+
+    background-image:url("images/background.png");
+    background-size:cover;
+    background-repeat:repeat-y;
+    background-position:0 0;
+
+    position:relative;
+    overflow:hidden;
+    border:4px solid white;
+    display:none;
+}
+
+.lane{
+    flex:1;
+    border:none;
+    background:transparent;
+}
+
+#player{
+    width:70px;
+    height:90px;
+
+    position:absolute;   /* IMPORTANT */
+    bottom:20px;         /* Put player at bottom */
+    left:165px;          /* Middle lane */
+
+    background-image:url("images/player-sprite.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+#obstacle{
+    width:70px;
+    height:90px;
+
+    background-image:url("images/enemy.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+
+    position:absolute;
+    top:0;
+    left:175px;
+}
+
+
+#coin{
+    width:30px;
+    height:30px;
+    position:absolute;
+    top:0px;
+    background-color: gold;
+    border-radius: 50%;
+    left:175px;
+}
+
+#obstacle2{
+    width:70px;
+    height:90px;
+
+    background-image:url("images/enemy.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+
+    position:absolute;
+}
+
+#gameOverScreen {
+    display:none;
+    position :fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background: white;
+    padding: 20px;
+    border: 3px solid black;
+    text-align: center;
+    z-index: 1000;
+}
+#menu{
+    text-align:center;
+    color:white;
+}
+
+#startBtn{
+    padding:10px 20px;
+    font-size:20px;
+    cursor:pointer;
+}
+#highScore{
+    position:absolute;
+    top:20px;
+    right:20px;
+    color:white;
+    font-size:30px;
+}
+#health{
+    position:absolute;
+    top:70px;
+    left:20px;
+    color:white;
+    font-size:30px;
+}
